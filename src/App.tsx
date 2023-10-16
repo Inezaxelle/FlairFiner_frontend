@@ -17,6 +17,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Stories from "./components/stories/Stories";
 import VideoGrid from "./components/videogrid/VideoGrid";
 import videos from "./Videos";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -37,6 +39,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Welcome />}></Route>
         <Route path="dashboard" element={<Dashboard />}>
